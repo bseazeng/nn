@@ -1,8 +1,8 @@
 all: nn
 .PHONY:all clean show
 CC=gcc
-SRC=$(wildcard ./*.c)
 SRC+=$(wildcard ./test/*.c)
+SRC+=main.c
 OBJ+=$(patsubst %.c,%.o,$(SRC))
 INC+=-I./include
 LIB+=

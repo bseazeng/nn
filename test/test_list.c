@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h" 
+#include "com.h"
 
 struct person 
 { 
@@ -10,7 +11,7 @@ struct person
     struct list_head list; 
 };
 
-test_lest(int argc, char* argv[]) 
+int run_list(int argc, char* argv[]) 
 { 
     struct person *pperson; 
     struct person person_head; 
@@ -66,6 +67,6 @@ test_lest(int argc, char* argv[])
         list_del_init(pos); 
         free(pperson); 
     }
+    return 0;
      
 }
-
